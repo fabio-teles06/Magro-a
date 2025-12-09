@@ -1,0 +1,16 @@
+extends CharacterBody2D
+
+
+const SPEED = 30.0
+
+
+func _physics_process(delta: float) -> void:
+
+	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	
+	if direction:
+		velocity = direction.normalized() * SPEED
+	else:
+		velocity = lerp(velocity, Vector2.ZERO, delta * 5)
+
+	move_and_slide()
