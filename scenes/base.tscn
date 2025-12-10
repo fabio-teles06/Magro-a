@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3g7sc2ahxfh4"]
+[gd_scene load_steps=6 format=3 uid="uid://b3g7sc2ahxfh4"]
 
-[ext_resource type="Script" uid="uid://bk43wuljxhbht" path="res://scripts/entities/character.gd" id="1_baglu"]
+[ext_resource type="Script" uid="uid://bk43wuljxhbht" path="res://scripts/Entities/character.gd" id="1_baglu"]
 [ext_resource type="Texture2D" uid="uid://bh01mlp70pleb" path="res://icon.svg" id="1_pvqg0"]
+[ext_resource type="PackedScene" uid="uid://def0diqt7r2nq" path="res://scenes/chunk.tscn" id="3_t45w4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p1x7y"]
 radius = 6.0
@@ -26,3 +27,5 @@ texture = ExtResource("1_pvqg0")
 shape = SubResource("CircleShape2D_baglu")
 target_position = Vector2(0, 0)
 max_results = 1
+
+[node name="Chunk" parent="." instance=ExtResource("3_t45w4")]
